@@ -32,10 +32,9 @@ export default function Login() {
     return axios
       .post(`https://ecommerce.routemisr.com/api/v1/auth/signin`, requestBody)
       .then(({ data }) => {
-        console.log(data);
         localStorage.setItem("userToken", data.token);
         setToken(data.token);
-        navigate("/");
+        navigate("/freshCart");
       })
       .catch((error) => {
         setLoading(false);
@@ -112,7 +111,7 @@ export default function Login() {
                 "Login"
               )}
             </button>
-            <Link to={"/forgetpass"} className="text-primary">
+            <Link to={"/freshCart/forgetpass"} className="text-primary">
               forget password
             </Link>
           </div>

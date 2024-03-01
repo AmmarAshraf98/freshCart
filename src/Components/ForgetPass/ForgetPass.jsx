@@ -26,7 +26,7 @@ export default function ForgetPass() {
       )
       .then(({ response }) => {
         setMessage(response?.data.message);
-        navigate("/verifycode");
+        navigate("/freshCart/verifycode");
         setLoading(false);
         return response;
       })

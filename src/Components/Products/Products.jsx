@@ -44,7 +44,6 @@ export default function Products() {
   async function addToWishList(id) {
     if (token) {
       const { data } = await addTolist(id);
-      console.log(data);
       toast.success(data?.message, {
         position: "top-right",
       });

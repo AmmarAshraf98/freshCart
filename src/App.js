@@ -27,7 +27,7 @@ function App() {
 
   let routes = createBrowserRouter([
     {
-      path: "",
+      path: "/freshCart/",
       element: <Layout />,
       children: [
         { index: true, element: <Home /> },

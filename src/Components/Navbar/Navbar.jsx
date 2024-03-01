@@ -18,7 +18,7 @@ export default function Navbar() {
   function logOut() {
     localStorage.removeItem("userToken");
     setToken(null);
-    navigate("/");
+    navigate("/freshCart");
   }
 
   // wish list usage
@@ -28,7 +28,7 @@ export default function Navbar() {
     <>
       <nav className="navbar navbar-expand-lg bg-main-light  ">
         <div className="container-fluid">
-          <Link className="navbar-brand text-white" to={"/"}>
+          <Link className="navbar-brand text-white" to={"/freshCart"}>
             <img src={logo} className="w-100" alt="" />
           </Link>
 
@@ -47,7 +47,7 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link" to={"/"}>
+                <NavLink className="nav-link" to={""}>
                   Home
                 </NavLink>
               </li>
@@ -89,7 +89,7 @@ export default function Navbar() {
                     </NavLink>
                   </li>
                   <li className="nav-item d-flex align-items-center ms-2 ps-1">
-                    <NavLink to={"/wishlist"}>
+                    <NavLink to={"wishlist"}>
                       <span className="position-relative">
                         <i className="fa-regular fa-heart"></i>
                         <span className="position-absolute  p-1 top-0 start-100 translate-middle badge rounded-pill bg-danger">

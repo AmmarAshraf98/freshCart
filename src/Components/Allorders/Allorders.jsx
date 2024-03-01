@@ -43,7 +43,6 @@ export default function Allorders() {
         <meta name="description" content="Your allorders products" />
       </Helmet>
       {loading && <Loading />}
-      {console.log(orders)}
       {orders && (
         <div className="container my-5 py-4 bg-main-light">
           <h2 className="text-center m-4">

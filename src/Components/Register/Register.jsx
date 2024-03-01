@@ -38,7 +38,7 @@ export default function Register() {
     await axios
       .post(`https://ecommerce.routemisr.com/api/v1/auth/signup`, requestBody)
       .then(() => {
-        navigate("/login");
+        navigate("/freshCart/login");
         setLoading(false);
       })
       .catch((err) => {

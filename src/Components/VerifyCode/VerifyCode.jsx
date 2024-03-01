@@ -20,7 +20,6 @@ export default function VerifyCode() {
 
   async function sendRequest(values) {
     setLoading(true);
-    console.log(values);
     return await axios
       .post(`https://ecommerce.routemisr.com/api/v1/auth/verifyResetCode`, {
         resetCode: `${values.resetCode}`,
@@ -28,7 +27,7 @@ export default function VerifyCode() {
       .then(({ response }) => {
         setLoading(false);
         setMessage(response?.data.message);
-        navigate("/resetPass");
+        navigate("/freshCart/resetPass");
         return response;
       })
       .catch(({ response }) => {

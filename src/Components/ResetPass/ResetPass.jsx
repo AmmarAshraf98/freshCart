@@ -32,7 +32,6 @@ export default function ResetPass() {
   });
 
   async function callLogApi(requestBody) {
-    console.log(requestBody);
     setLoading(true);
     await axios
       .put(
@@ -42,7 +41,7 @@ export default function ResetPass() {
       .then(({ data }) => {
         localStorage.setItem("userToken", data.token);
         setToken(data.token);
-        navigate("/login");
+        navigate("/freshCart/login");
       })
       .catch((error) => {
         setLoading(false);
