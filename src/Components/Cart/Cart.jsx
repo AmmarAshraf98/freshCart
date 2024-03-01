@@ -131,7 +131,7 @@ export default function Cart() {
             </div>
           ))}
           <Link
-            to={"/shppingaddress"}
+            to={"/freshCart/shppingaddress"}
             className="btn bg-main text-white w-100 my-3"
           >
             Check out
